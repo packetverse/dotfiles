@@ -1,6 +1,9 @@
 [init]
     defaultBranch = main
 
+[commit]
+    template = ~/.config/git/template
+
 [status]
     branch = true
     showStash = true
@@ -17,6 +20,9 @@
 
 ; [diff-so-fancy]
 ;     markEmptyLines = false
+
+[advice]
+    addEmptyPathspec = false
 
 [interactive]
     ; diffFilter = diff-so-fancy --patch
