@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+
+[include]
+    path = ~/.local/git.config
+
+[includeIf "gitdir:~/dev/github.com/packetverse/"]
+    path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.gitconfig.personal
