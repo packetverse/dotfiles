@@ -32,6 +32,19 @@ export GOPATH="$XDG_DATA_HOME"/go
 # wget alias for history file in xdg dirs
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 
+# git aliases
+alias gs="git status --short"
+alias gd="git diff"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gu="git pull"
+alias gl="git log"
+alias gb="git branch"
+alias gco="git checkout"
+alias gi="git init"
+alias gcl="git clone"
+
 # uv and uvx auto completion
 eval "$(uv generate-shell-completion bash)"
 eval "$(uvx --generate-shell-completion bash)"
