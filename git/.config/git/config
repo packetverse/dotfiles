@@ -6,6 +6,29 @@
     showStash = true
     showUntrackedFiles = all
 
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10
+
+[pager]
+    branch = false
+    diff = diff-so-fancy | $PAGER
+
+[diff-so-fancy]
+    markEmptyLines = false
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+    singlekey = true
+
+[color "diff"]
+    meta        = black bold
+    frag        = magenta
+    context     = white
+    whitespace  = yellow reverse
+    old         = red
+
 [core]
     compression = 9
     whitespace = error
