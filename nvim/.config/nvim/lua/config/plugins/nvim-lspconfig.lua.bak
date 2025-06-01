@@ -1,0 +1,7 @@
+-- NOTE: Replaced by lsp/ folder in plugins dir with more config from Seth Phaeno
+-- return {
+--     "neovim/nvim-lspconfig",
+--     config = function()
+--         vim.lsp.enable("ruff")
+--     end,
+-- }

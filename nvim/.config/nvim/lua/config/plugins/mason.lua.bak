@@ -1,0 +1,9 @@
+-- NOTE: Replaced by mason.lua in lsp/ folder in plugins dir and using config by Seth Phaeno
+-- return {
+--     {
+--         "mason-org/mason.nvim",
+--         config = function()
+--             require("mason").setup()
+--         end,
+--     }
+-- }
