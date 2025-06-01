@@ -1,0 +1,3 @@
+# ignore everything inside tmux plugins dir besides tpm (plugin manager)
+/tmux/.config/tmux/plugins/*
+!/tmux/.config/tmux/plugins/tpm
