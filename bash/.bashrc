@@ -29,6 +29,11 @@ export GOPATH="$XDG_DATA_HOME"/go
 # use nvim as pager for man 
 export MANPAGER="nvim +Man!"
 
+# some important env vars
+export EDITOR="nvim"
+export PAGER="less"
+export VISUAL="${EDITOR}"
+
 # WARNING: Moving this file can potentially lead to not being able to start your X11 session or some programs (eg. Wine) not working as intended.**
 # export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
