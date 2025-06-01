@@ -6,4 +6,8 @@
 
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 
+export EDITOR="nvim"
+export PAGER="less"
+export VISUAL="${EDITOR}"
+
 . "$HOME/.local/bin/env"
