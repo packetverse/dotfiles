@@ -1,7 +1,0 @@
-- [ ] Setup notifications
-- [ ] Setup screenshotting utility and keybind
-- [ ] Setup scratchpad for i3
-- [ ] Setp zsh together with starship as prompt
-- [ ] Setup login manager like SDDM or something nice for i3
-- [ ] Make most things catppuccin
-- [ ] Make different branches on git repo for colorschemes e.g., `i3/catppuccin`, `i3/gruvbox`, `hyprland/catppuccin`
