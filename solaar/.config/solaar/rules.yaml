@@ -1,0 +1,46 @@
+%YAML 1.3
+# NOTE: You need to ensure all these keys are diverted
+
+# Previous song if Shift+Volume Down is pressed on keyboard
+---
+- Key: [Volume Down Fn, pressed]
+- Modifiers: Shift
+- Execute: [playerctl, previous]
+...
+
+# This rule is standard functionality but needs to be added manually because the above rule overwrote it
+---
+- Key: [Volume Down Fn, pressed]
+- KeyPress:
+  - XF86_AudioLowerVolume
+  - click
+...
+
+# Next song if Shift+Volume Up is pressed on keyboard
+---
+- Key: [Volume Up Fn, pressed]
+- Modifiers: Shift
+- Execute: [playerctl, next]
+...
+
+# This rule is standard functionality but needs to be added manually because the above rule overwrote it
+---
+- Key: [Volume Up Fn, pressed]
+- KeyPress:
+  - XF86_AudioRaiseVolume
+  - click
+...
+
+# Play/Pause current media playing
+---
+- Key: [Play/Pause Fn, pressed]
+- Execute: [playerctl, play-pause]
+...
+
+# Mute Microphone
+---
+- Key: [Mute Microphone, pressed]
+- KeyPress:
+  - XF86_AudioMicMute
+  - click
+...
