@@ -11,7 +11,13 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/arch
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
-# Execute picom
+# Launch Solaar
+exec --no-startup-id exec solaar -w hide -b solaar
+
+# Launch GNOME polkit
+exec --no-startup-id exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Launch picom
 exec --no-startup-id picom
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -26,6 +32,9 @@ exec --no-startup-id dex --autostart --environment i3
 # Start pulseaudio
 exec --no-startup-id pulseaudio --start
 
+# Screenshots
+bindsym $mod+Shift+s exec --no-startup-id maim --select "/home/symere/Pictures/$(date +%s).png" | xclip -selection clipboard -t image/png
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
@@ -39,11 +48,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/scripts/lock.sh
 # exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-# set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -150,7 +158,7 @@ mode "resize" {
     # back to normal binds
     bindsym Return mode "default"
     bindsym Escape mode "default"
-	bindsym BackSpace mode "default" 
+	bindsym BackSpace mode "default"
     bindsym $mod+r mode "default"
 }
 
