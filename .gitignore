@@ -5,3 +5,7 @@
 # ignore solaar config because its different for everybody
 /solaar/.config/solaar/*
 !/solaar/.config/solaar/rules.yaml
+
+# ignore ~/.config/systemd folder since units will be symlinked
+/systemd/.config/systemd/user/*
+!/systemd/.config/systemd/user/README.md
