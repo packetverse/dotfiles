@@ -22,9 +22,25 @@ Dotfiles for personal use, currently on Arch Linux.
 
 ## TODO
 
+### General
+
 - [x] Setup screenshotting utility and keybind
-- [ ] Setup notifications
-- [ ] Setup scratchpad for i3
+- [x] Setup notifications
 - [ ] Setp zsh together with starship as prompt
 - [x] Setup login manager like SDDM or something nice for i3
 - [ ] Make most things catppuccin
+
+### tmux
+
+- [ ] make session index start at 1 instead of 0
+
+### niri
+
+- [x] block gmail from screencapture
+
+### mako (or any other notif daemon)
+
+- [ ] make notifs dissappear (timeout) after inactivity
+
+### neovim
+- [ ] make keybind (<leader>ln) to toggle relative line numbers
