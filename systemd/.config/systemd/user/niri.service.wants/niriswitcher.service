@@ -1,0 +1,10 @@
+[Unit]
+Description=An application switcher for niri
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/niriswitcher
+Restart=on-failure
+
