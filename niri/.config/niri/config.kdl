@@ -68,13 +68,14 @@ output "eDP-1" {
 
 output "DP-3" {
     mode "1920x1080@74.986"
+    // mode "1920x1080@60.000"
     scale 1
     transform "normal"
 
     // Can introduce issues like mode (flash back) can be turned off
     variable-refresh-rate on-demand=true
 
-    background-color "#1e1e2e"
+    background-color "#313244"
     backdrop-color "#313244"
 }
 
@@ -317,8 +318,12 @@ environment {
     QT_QPA_PLATFORM "wayland"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     EDITOR "nvim"
+    LIBVA_DRIVER_NAME "nvidia"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
     MOZ_ENABLE_WAYLAND "1"
+    NVD_BACKEND "direct"
     DISPLAY ":0"
+    GDK_BACKEND "wayland"
 }
 
 cursor {
@@ -484,3 +489,25 @@ animations {
 
     window-resize {}
 }
+
+/*
+██╗      █████╗ ██╗   ██╗███████╗██████╗     ██████╗ ██╗   ██╗██╗     ███████╗███████╗
+██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ██╔══██╗██║   ██║██║     ██╔════╝██╔════╝
+██║     ███████║ ╚████╔╝ █████╗  ██████╔╝    ██████╔╝██║   ██║██║     █████╗  ███████╗
+██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗    ██╔══██╗██║   ██║██║     ██╔══╝  ╚════██║
+███████╗██║  ██║   ██║   ███████╗██║  ██║    ██║  ██║╚██████╔╝███████╗███████╗███████║
+╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
+*/
+
+layer-rule {
+    match namespace="waybar"
+    // match at-startup=true
+
+    place-within-backdrop false
+
+
+    shadow {
+        off
+    }
+}
+
