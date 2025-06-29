@@ -233,5 +233,10 @@ return {
         -- lspconfig.gopls.setup({ capabilities = capabilities })
         -- lspconfig.html.setup({ capabilities = capabilities })
         -- lspconfig.cssls.setup({ capabilities = capabilities })
+        --
+        -- QML
+        require("lspconfig").qmlls.setup {
+            cmd = {"qmlls", "-E"}
+        }
     end,
 }
