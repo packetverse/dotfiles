@@ -6,8 +6,8 @@ Dotfiles for personal use, currently on Arch Linux.
 
 | Type | Currently in use |
 | --- | --- |
-| Window Manager | i3 (X11) |
-| Notifications | not working |
+| Window Manager | Niri (Wayland) |
+| Notifications | Mako |
 | Shell | bash |
 | Prompt | starship |
 | Edtior | neovim |
@@ -18,7 +18,7 @@ Dotfiles for personal use, currently on Arch Linux.
 
 1. Clone the repository and move and rename it to whatever you want
 2. Ensure GNU Stow is installed: `sudo pacman -S --needed stow`
-3. `cd` into the directory and run `stow .`
+3. `cd` into the directory and run e.g., `stow niri` if you wish to use that config
 
 ## TODO
 
@@ -27,7 +27,6 @@ Dotfiles for personal use, currently on Arch Linux.
 - [x] Setup screenshotting utility and keybind
 - [x] Setup notifications
 - [ ] Setp zsh together with starship as prompt
-- [x] Setup login manager like SDDM or something nice for i3
 - [ ] Make most things catppuccin
 
 ### tmux
