@@ -235,6 +235,8 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
+    Mod+Shift+S { screenshot; }
+
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
 
