@@ -12,6 +12,7 @@ from modules import (
     CornerBottom,
     Dashboard,
     SlideTopBar,
+    PowerMenu
 )
 
 from modules.shared_widgets import (
@@ -35,6 +36,8 @@ for monitor in range(utils.get_n_monitors()):
     # CornerBottom(monitor)
     # Dashboard(monitor)
     # SlideTopBar(monitor)
+    PowerMenu()
+
     # Popout(
     #     anchor=["top", "left", "bottom"],
     #     layer="top",
@@ -46,8 +49,8 @@ for monitor in range(utils.get_n_monitors()):
     #     reveal_child=True,
     #     transition_type="slide_right",
     #     transition_duration=300,
-    #     # margin_top=64,
-    #     # margin_bottom=64,
+    #     margin_top=64,
+    #     margin_bottom=64,
     #     child=widgets.Box(
     #         hexpand=True,
     #         child=[
@@ -62,56 +65,29 @@ for monitor in range(utils.get_n_monitors()):
     #     )
     # )
 
-    PopoutDarken(
-        anchor=["top", "left", "bottom"],
-        layer="top",
-        exclusivity="ignore",
-        namespace="testing",
-        css_classes=["bar-popout"],
-        hide_delay=200,
-        visible=False,
-        reveal_child=True,
-        transition_type="slide_right",
-        transition_duration=200,
-        # margin_top=64,
-        # margin_bottom=64,
-        child=widgets.Box(
-            hexpand=True,
-            child=[
-                widgets.CenterBox(
-                    hexpand=True,
-                    vertical=True,
-                    start_widget=widgets.Label(label="start"),
-                    center_widget=widgets.Label(label="center"),
-                    end_widget=widgets.Label(label="end"),
-                ),
-            ]
-        )
-    )
-
-    # darken_overlay = widgets.Window(
-    #     namespace="test-darken",
+    # PopoutDarken(
+    #     anchor=["top", "left", "bottom"],
+    #     layer="top",
     #     exclusivity="ignore",
-    #     anchor=["top", "bottom", "left", "right"],
-    #     layer="overlay",
-    #     kb_mode="none",
+    #     namespace="testing",
+    #     css_classes=["bar-popout"],
+    #     hide_delay=200,
+    #     visible=False,
+    #     reveal_child=True,
+    #     transition_type="slide_right",
+    #     transition_duration=200,
+    #     margin_top=64,
+    #     margin_bottom=64,
     #     child=widgets.Box(
-    #         style="background-color: rgba(0, 0, 0, 0.25);",
-    #         visible=False,
-    #     ),
-    #     visible=True,
-    #     css_classes=["unset"],
+    #         hexpand=True,
+    #         child=[
+    #             widgets.CenterBox(
+    #                 hexpand=True,
+    #                 vertical=True,
+    #                 start_widget=widgets.Label(label="start"),
+    #                 center_widget=widgets.Label(label="center"),
+    #                 end_widget=widgets.Label(label="end"),
+    #             ),
+    #         ]
+    #     )
     # )
-
-    # darken_overlay.set_decorated(False)
-    # darken_overlay.fullscreen()
-    # darken_overlay.set_fullscreen()
-    # .darken_overlay.set_app_paintable(True)
-    # darken_overlay.set_can_focus(False)
-
-    # rgba = Gdk.RGBA(0, 0, 0, 0.5)
-    # darken_overlay.set_background_color(rgba)
-
-    # darken_overlay.set_accept_focus(False)
-    # darken_overlay.set_focusable(False)
-    # darken_overlay.set_keep_above(True)
