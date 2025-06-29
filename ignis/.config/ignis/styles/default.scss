@@ -1,0 +1,28 @@
+* {
+  // all: unset;
+  padding: 0;
+  margin: 0;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+.bar-window {
+  background-color: #585b70;
+  // padding-top: 1rem;
+  padding: 0.5rem;
+  // padding-bottom: 1rem;
+  min-width: 24px;
+}
+
+// .active-window {
+//   transform: rotate(90deg);
+//   transform-origin: center;
+//   min-width: 24px;
+// }
+
+.bar-popout {
+  background-color: beige;
+  color: black;
+  font-weight: bold;
+  padding: 4px;
+}
+
