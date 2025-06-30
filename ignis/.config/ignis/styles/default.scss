@@ -12,27 +12,34 @@ button {
   border: none;
 }
 
+// Bar
 .bar-window {
   background-color: #585b70;
-  // padding-top: 1rem;
   padding: 0.5rem;
-  // padding-bottom: 1rem;
   min-width: 24px;
 }
-
-// .active-window {
-//   transform: rotate(90deg);
-//   transform-origin: center;
-//   min-width: 24px;
-// }
 
 .bar-popout {
   background-color: beige;
   color: black;
   font-weight: bold;
-  padding: 4px;
+  // padding: 4px;
 }
 
+.workspace {
+  color: white;
+  padding: 0.25rem;
+}
+
+.focused-workspace {
+  background-color: #6c7086;
+  border-radius: 0.5rem;
+}
+
+.workspaces {
+  background-color: #7f849c;
+  border-radius: 0.5rem;
+}
 
 // PowerMenu
 .power-menu-box {

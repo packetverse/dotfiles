@@ -3,7 +3,7 @@ import asyncio
 from ignis import widgets
 from ignis import utils
 from typing import Callable
-from ..shared_widgets import Popout
+from modules.shared_widgets import Popout
 
 def create_exec_task(cmd: str) -> None:
     asyncio.create_task(utils.exec_sh_async(cmd))
